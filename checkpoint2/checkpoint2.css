@@ -1,0 +1,73 @@
+.navbar {
+  display: inline;
+  background-color: rgb(231, 161, 161);
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-style: groove;
+  border-color: black;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  color: rgb(54, 50, 39);
+  padding-left: 350px;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  font-size: 250%;
+}
+* {
+  color: rgb(3, 3, 34);
+}
+h2 {
+  color: rgba(25, 9, 38, 0.84);
+}
+input {
+  width: 150px;
+  height: 40px;
+  box-sizing: border-box;
+  color: rgb(58, 4, 19);
+  padding-left: 15px;
+  background-image: linear-gradient(rgb(223, 164, 173), pink);
+}
+body {
+  background-image: url(./portfolio.jpg);
+}
+.welcome {
+  padding-left: 700px;
+}
+h2 {
+  padding-left: 150px;
+  font-size: 30px;
+  padding-top: 5px;
+}
+.futur {
+  padding-left: 260px;
+  font-size: 30px;
+}
+footer {
+  padding-left: 1000px;
+  padding-top: 160px;
+  padding-bottom: 50px;
+  font-size: 25px;
+}
+.work {
+  padding-left: 850px;
+  margin-bottom: 200px;
+}
+.work > p {
+  padding-left: 200px;
+  font-size: 25px;
+}
+.resume {
+  padding-left: 300px;
+  font-size: 18px;
+}
+.contactme {
+  padding-left: 300px;
+  font-size: 18px;
+}
