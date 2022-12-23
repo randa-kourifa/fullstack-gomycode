@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shoppingcard.css" />
+    <title>La Boutique</title>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <main>
+      <table>
+        <thead>
+          <h1>Bienvenue chez PIZZA FEU DE BOIS</h1>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td>
+            <img src="./pizza-1.1s-200px.png" height="150px" width="150px" />
+          </td>
+          <td>Pizza aux champignons</td>
+          <td class="price">650 </td>
+          <td class="count">0</td><th>
+            <td class="total">0</td>
+            <td>
+          <div onclick="ajoutez(event)">ajoutez au panier</div>
+          <div onclick="supprimer(event)">supprimer du panier</div>
+          <div onclick="deletepizza(event)">tout supprimer</div></td></th>
+
+           </tr>
+           <tr>
+            <td>
+              <img
+              src="./pizza-1.1s-200px (2).png"
+              height="150px"
+              width="150px"
+            />
+          </td>
+          <td>Pizza aux pepperonis</td>
+            
+            <td class="price">750 </td>
+          <td class="count">0</td><th>
+            <td class="total">0</td>
+            <td>
+          <div onclick="ajoutez(event)">ajoutez au panier</div>
+          <div onclick="supprimer(event)">supprimer du panier</div>
+          <div onclick="deletepizza(event)">tout supprimer</div></td></th>
+          </tr>
+          </th>
+          <tr>
+            <td><img
+              src="./pizza-1.1s-200px (1).png"
+              height="150px"
+              width="150px"
+            /></td><td>Pizza 4 fromages</td>
+            <td class="price">650 </td>
+          <td class="count">0</td><th>
+            <td class="total">0</td>
+            <td>
+          <div onclick="ajoutez(event)">ajoutez au panier</div>
+          <div onclick="supprimer(event)">supprimer du panier</div>
+          <div onclick="deletepizza(event)">tout supprimer</div></td></th>
+          </tr>
+        </tr>
+        <tr class="cartTotal">
+            <td>Total: <span></span></td>
+        </tr>
+        </tbody>
+
+        
+         
+    </main>
+    <script >
+      function deletepizza(e) {
+  
+        e.target.parentElement.parentElement.remove();}
+    function ajoutez(e){
+      const count=e.target.parentElement.parentElement
+      totalEl = count.querySelector(".total")
+      countt=count.querySelector(".count")
+      prix=count.querySelector(".price")
+      
+      countt.innerText++
+      totalEl.innerHTML = countt.innerHTML * prix.innerHTML
+      actualiser()
+    }
+    function supprimer(e){
+      const count=e.target.parentElement.parentElement
+      countt=count.querySelector(".count")
+      totalEl = count.querySelector(".total")
+      prix=count.querySelector(".price")
+      
+      if (countt.innerText == "1") return false
+      countt.innerHTML--
+      totalEl.innerHTML = countt.innerHTML * prix.innerHTML
+      actualiser()
+    }
+   
+    function actualiser(){
+      
+            totalarray = document.querySelectorAll(".total")
+            totalCart = document.querySelector(".cartTotal span")
+             let total = 0
+            totalarray.forEach((item) => {
+                total += parseInt(item.innerHTML)
+            })
+            totalCart.innerHTML = total
+        }
+   
+    </script>
+  </body>
+</html>
