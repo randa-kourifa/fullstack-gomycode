@@ -1,0 +1,21 @@
+import "./App.css";
+import Data from "./Profile/components/Data";
+import HandleName from "./Profile/components/HandleName";
+import Images from "./Profile/components/Image";
+function App() {
+  return (
+    <div className="App">
+      <Data
+        name="Elon Musk"
+        biographie="i am the richest person in the us"
+        job="DG"
+      />
+      <Images>
+        <img src="/checkoint11/src/assets/and.jpg" />
+      </Images>
+      <HandleName user="Elon Musk" />
+    </div>
+  );
+}
+
+export default App;
