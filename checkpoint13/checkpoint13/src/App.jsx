@@ -1,14 +1,18 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Filter from "./components/Filter";
-import MovieCard from "./components/MovieCard";
-import MovieList from "./components/MovieList";
+import Descriptionandtrailer from "./pages/descriptionandtrailer";
+import Homes from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <MovieCard />
-      <MovieList />
-      <Filter />
+      <Routes>
+        <Route
+          path="/descriptionandtrailer:id"
+          element={<Descriptionandtrailer />}
+        />
+        <Route path="/Home:id" element={<Homes />} />
+      </Routes>
     </div>
   );
 }

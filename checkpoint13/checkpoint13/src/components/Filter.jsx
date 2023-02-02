@@ -1,6 +1,4 @@
-//Filter.js
 import React, { useState } from "react";
-
 const Filter = ({ handleFilter, handleAddMovie }) => {
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState(0);
@@ -37,3 +35,4 @@ const Filter = ({ handleFilter, handleAddMovie }) => {
     </div>
   );
 };
+export default Filter;
