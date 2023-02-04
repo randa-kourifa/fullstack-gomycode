@@ -21,10 +21,10 @@ const todoSlice = createSlice({
   initialState: tasks,
   reducers: {
     addToDo: (state, action) => {
+      localStorage.setItem("tasks", JSON.stringify([...state, action.payload]));
       return (state = [...state, action.payload]);
     },
     deleteTodo: (state, action) => {
-      localStorage.setItem("tasks", JSON.stringify([...state, action.payload]));
       return (state = state.filter((task) => task.id !== action.payload));
     },
 
