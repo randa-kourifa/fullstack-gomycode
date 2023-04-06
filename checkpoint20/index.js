@@ -28,7 +28,6 @@
 //     });
 //     console.log("Person saved to database:", person);
 
-//     // Ajout d'un tableau de personnes
 //     const arrayOfPeople = [
 //       { name: "Alice", age: 30, favoriteFoods: ["spaghetti", "salad"] },
 //       { name: "Bob", age: 35, favoriteFoods: ["tacos", "pizza"] },
@@ -37,7 +36,6 @@
 //     const people = await Person.insertMany(arrayOfPeople);
 //     console.log("People saved to database:", people);
 
-//     // Recherche des personnes
 //     const peopleWithJohnName = await Person.find({ name: "John" });
 //     console.log("People with name John:", peopleWithJohnName);
 
